@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="Assets/style.css">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <div class="full_Img" id="full_ImgBox">
+        <img src="Assets/images/Peugeot 508.jpg" id="fullImg">
+        <span onclick="closeFullimg()">X</span>
+    </div>
+
+    <div class="gallery">
+        <img src="Assets/images/Peugeot 508.jpg" alt="Image 1" onclick="openFullimg(this.src)">
+        <img src="Assets/images/Hyundai Elantra 2024.jpeg" alt="Image 2" onclick="openFullimg(this.src)">
+        <img src="Assets/images/BMW 320i 2024.jpg" alt="Image 3" onclick="openFullimg(this.src)">
+        <img src="Assets/images/Elantra.jpg" alt="Image 4" onclick="openFullimg(this.src)">
+    </div>
+
+
+    <!-- JS Link -->
+    <script src="Assets/JavaScript.js"></script>
+</body>
+</html>
