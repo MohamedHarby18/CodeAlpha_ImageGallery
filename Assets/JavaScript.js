@@ -1,11 +1,29 @@
-var fullImgBox = document.getElementById("full_ImgBox");
-var fullImg = document.getElementById("fullImg");
+document.addEventListener("DOMContentLoaded", () => {
+    const fullImgBox = document.getElementById("full_ImgBox");
+    const fullImg = document.getElementById("fullImg");
+    const galleryImages = document.querySelectorAll(".gallery img");
+    const closeBtn = document.querySelector(".close-btn");
 
-function openFullimg(pic) {
-    fullImgBox.style.display = "flex";
-    fullImg.src=pic;
-}
+    galleryImages.forEach(img => {
+        img.addEventListener("click", () => {
+            fullImgBox.classList.add("active");
+            fullImg.src = img.src;
+        });
+    });
 
-function closeFullimg() {
-    fullImgBox.style.display = "none";
-}
+    closeBtn.addEventListener("click", () => {
+        fullImgBox.classList.remove("active");
+    });
+
+    fullImgBox.addEventListener("click", (e) => {
+        if (e.target === fullImgBox) {
+            fullImgBox.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            fullImgBox.classList.remove("active");
+        }
+    });
+});
