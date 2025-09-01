@@ -75,3 +75,31 @@ h1 {
     font-weight: bold;
     user-select: none;
 }
+
+footer {
+    margin: 3px 0;
+    text-align: center;
+    color: #666;
+    background-color: rgb(28, 28, 28);
+    width: 100%;
+    padding: 25px 0;
+}
+
+footer a {
+    margin: 0 10px;
+    color: #727272;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+footer p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
